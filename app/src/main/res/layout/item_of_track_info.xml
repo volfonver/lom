@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:orientation="horizontal"
+    android:paddingLeft="16dp"
+    android:paddingTop="4dp"
+    android:paddingRight="16dp">
+
+    <ImageButton
+        android:id="@+id/imageOfMusic"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="-48dp"
+        android:background="@drawable/ic_muses_record"
+        android:elevation="10dp" />
+    <!--   elevation == приоритет -->
+
+    <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:card_view="http://schemas.android.com/tools"
+        android:id="@+id/card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="18dp"
+        android:layout_weight="1"
+        app:cardUseCompatPadding="true"
+        card_view:cardElevation="10dp">
+<!--                app:cardUseCompatPadding="true"-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/signer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:maxLines="1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/nameOfMusic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:maxLines="1" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+<!--
+    <CheckBox
+        android:id="@+id/isSelected"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="0"
+        android:layout_margin="12dp"
+        android:background="@drawable/checkbox_selector"
+        android:button="@null"/>-->
+
+</LinearLayout>
